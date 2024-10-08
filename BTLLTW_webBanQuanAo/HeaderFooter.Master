@@ -1,0 +1,115 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="HeaderFooter.master.cs" Inherits="BTLLTW_webBanQuanAo.HeaderFooter" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link rel="stylesheet" href="style/styleIndex.css">
+    <link rel="stylesheet" href="style/base.css">
+</head>
+<body>
+            <header class="header">
+                <div class="container">
+                    <div class="logo">
+                        <a href="index.aspx">
+                            Put logo here
+                        </a>
+                    </div>
+                    <div class="menu">
+                        <ul>
+                            <li><a href="dssp.aspx?category=new">Sản phẩm mới</a></li>
+                            <li><a href="dssp.aspx?category=sale">Sale</a></li>
+                            <li>
+                                <a href="dssp.aspx?category=male">Thời trang nam</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="dssp.aspx?category=m_casual">Đồ mặc hằng ngày</a></li>
+                                    <li><a href="dssp.aspx?category=m_work">Đồ công sở</a></li>
+                                    <li><a href="dssp.aspx?category=m_sports">Đồ thể thao</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="dssp.aspx?category=female">Thời trang nữ</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="dssp.aspx?category=f_casual">Đồ mặc hằng ngày</a></li>
+                                    <li><a href="dssp.aspx?category=f_work">Đồ công sở</a></li>
+                                    <li><a href="dssp.aspx?category=f_sports">Đồ thể thao</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="dssp.aspx?category=kid">Thời trang trẻ em</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="action">
+                        <ul>
+                            <li>
+                                <div class="search-box">
+                                    <div class="search-box-img">
+                                        <a href="#"><img src="resource/search.png" alt="" width="35px"></a>
+                                    </div>
+                                    <input type="text" name="search" id="search" value="">
+                                </div>
+                            </li>
+                            <li>
+                                <a href="login.aspx"><img src="resource/user.png" alt="" width="35px"></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="resource/cart.png" alt="" width="35px"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+
+            <div class ="main-content">
+                <div class ="container">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+                </div>
+            </div>
+
+            <div class="footer">
+                <div class="container">
+                    <div class="inner-wrap">
+                        <div class="column col-4">
+                            <img src="resource/aogio_1.jpg" alt="" width="100px">
+                            <br/>
+                            <h2>Cửa hàng thời trang số 1 VN :o</h2>
+                            <p>put logo here</p>
+                        </div>
+                        <div class="column col-4">
+                            <p><b>Bạn cần hỗ trợ</b></p>
+                            <br/>
+                            <h2>0123 4567</h2>
+                            <br/>
+                            <p><b>Địa chỉ: </b> Số a, ngõ b, đường c, phường D, quận E, thành phố Hà Nội</p>
+                            <p><b>Email: </b>support@gamil.com</p>
+
+                            <br>
+                            <p>//Đặt thêm social media asset vào đây</p>
+                        </div>
+                        <div class="column col-4">
+                            <p><b>Hướng dẫn mua hàng</b></p>
+                            <br>
+                            <p><a href="#">Trang chủ</a></p>
+                            <p><a href="#">Giới thiệu</a></p>
+                            <p><a href="#">Danh mục</a></p>
+                            <p><a href="#">Tin tức</a></p>
+                            <p><a href="#">Liên hệ</a></p>
+                            <p><a href="#">Hướng dẫn sử dụng</a></p>
+                        </div>
+                        <div class="column col-4">
+                            <p><b>Hướng dẫn mua hàng</b></p>
+                            <br>
+                            <p><a href="#">Trang chủ</a></p>
+                            <p><a href="#">Giới thiệu</a></p>
+                            <p><a href="#">Danh mục</a></p>
+                            <p><a href="#">Tin tức</a></p>
+                            <p><a href="#">Liên hệ</a></p>
+                            <p><a href="#">Hướng dẫn sử dụng</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+</body>
+</html>
