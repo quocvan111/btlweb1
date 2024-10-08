@@ -160,7 +160,7 @@ namespace BTLLTW_webBanQuanAo
         {
             string html = "";
             html += "<div class='item'>" +
-                        "<a href='#'>" +
+                        "<a href='ctsp.aspx?id="+item.Id+"'>" +
                             "<img src='" + item.Image + "' alt=''>" +
                         "</a>" +
                         "<div class='item-info'>" +
