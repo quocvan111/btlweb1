@@ -17,6 +17,7 @@ namespace BTLLTW_webBanQuanAo
             List<Item> items = (List<Item>)Application["itemList"];
             hienoday.InnerHtml = s;
             showTitle.InnerHtml = renderTitle();
+
         }
 
         private string renderTitle()
@@ -34,12 +35,83 @@ namespace BTLLTW_webBanQuanAo
             string html = "";
             List<Item> list = (List<Item>)Application["itemList"];
             string category = Request.QueryString["category"];
+            string loctien = "";
+            loctien = Request.Form["filtertien"];
+
+            //if (loctien == "giatren500")
+            //{
+            //    foreach (Item item in list)
+            //    {
+            //        if (item.Final_price > 500000)
+            //        {
+            //            html += generateString(item);
+            //        }
+            //    }
+            //    return html;
+            //}
+
+            //if (loctien == "gia200-500")
+            //{
+            //    foreach (Item item in list)
+            //    {
+            //        if (item.Final_price > 200000 && item.Final_price < 500000)
+            //        {
+            //            html += generateString(item);
+            //        }
+            //    }
+            //    return html;
+            //}
+
+            //if (loctien == "giaduoi200")
+            //{
+            //    foreach (Item item in list)
+            //    {
+            //        if (item.Final_price < 200000)
+            //        {
+            //            html += generateString(item);
+            //        }
+            //    }
+            //    return html;
+            //}
 
             if (category == "male")
             {
+                if (loctien == "giatren500")
+                {
+                    foreach (Item item in list)
+                    {
+                        if (item.Category <= 3 && item.Final_price > 500000)
+                        {
+                            html += generateString(item);
+                        }
+                    }
+                    return html;
+                }
+                if (loctien == "gia200-500")
+                {
+                    foreach (Item item in list)
+                    {
+                        if (item.Category <= 3 && item.Final_price > 200000 && item.Final_price < 500000)
+                        {
+                            html += generateString(item);
+                        }
+                    }
+                    return html;
+                }
+                if (loctien == "giaduoi200")
+                {
+                    foreach (Item item in list)
+                    {
+                        if (item.Category <= 3 && item.Final_price < 500000)
+                        {
+                            html += generateString(item);
+                        }
+                    }
+                    return html;
+                }
                 foreach (Item item in list)
                 {
-                    if (item.Category <= 3)
+                    if (item.Category <= 3 && item.Final_price > 500000)
                     {
                         html += generateString(item);
                     }
@@ -48,6 +120,39 @@ namespace BTLLTW_webBanQuanAo
 
             if (category == "m_casual")
             {
+                if (loctien == "giatren500")
+                {
+                    foreach (Item item in list)
+                    {
+                        if (item.Category == 1 && item.Final_price > 500000)
+                        {
+                            html += generateString(item);
+                        }
+                    }
+                    return html;
+                }
+                if (loctien == "gia200-500")
+                {
+                    foreach (Item item in list)
+                    {
+                        if (item.Category == 1 && item.Final_price > 200000 && item.Final_price < 500000)
+                        {
+                            html += generateString(item);
+                        }
+                    }
+                    return html;
+                }
+                if (loctien == "giaduoi200")
+                {
+                    foreach (Item item in list)
+                    {
+                        if (item.Category == 1 && item.Final_price < 500000)
+                        {
+                            html += generateString(item);
+                        }
+                    }
+                    return html;
+                }
                 foreach (Item item in list)
                 {
                     if (item.Category == 1)
@@ -59,6 +164,39 @@ namespace BTLLTW_webBanQuanAo
 
             if (category == "m_work")
             {
+                if (loctien == "giatren500")
+                {
+                    foreach (Item item in list)
+                    {
+                        if (item.Category == 2 && item.Final_price > 500000)
+                        {
+                            html += generateString(item);
+                        }
+                    }
+                    return html;
+                }
+                if (loctien == "gia200-500")
+                {
+                    foreach (Item item in list)
+                    {
+                        if (item.Category == 2 && item.Final_price > 200000 && item.Final_price < 500000)
+                        {
+                            html += generateString(item);
+                        }
+                    }
+                    return html;
+                }
+                if (loctien == "giaduoi200")
+                {
+                    foreach (Item item in list)
+                    {
+                        if (item.Category == 2 && item.Final_price < 500000)
+                        {
+                            html += generateString(item);
+                        }
+                    }
+                    return html;
+                }
                 foreach (Item item in list)
                 {
                     if (item.Category == 2)
@@ -70,6 +208,39 @@ namespace BTLLTW_webBanQuanAo
 
             if (category == "m_sports")
             {
+                if (loctien == "giatren500")
+                {
+                    foreach (Item item in list)
+                    {
+                        if (item.Category == 3 && item.Final_price > 500000)
+                        {
+                            html += generateString(item);
+                        }
+                    }
+                    return html;
+                }
+                if (loctien == "gia200-500")
+                {
+                    foreach (Item item in list)
+                    {
+                        if (item.Category == 3 && item.Final_price > 200000 && item.Final_price < 500000)
+                        {
+                            html += generateString(item);
+                        }
+                    }
+                    return html;
+                }
+                if (loctien == "giaduoi200")
+                {
+                    foreach (Item item in list)
+                    {
+                        if (item.Category == 3 && item.Final_price < 500000)
+                        {
+                            html += generateString(item);
+                        }
+                    }
+                    return html;
+                }
                 foreach (Item item in list)
                 {
                     if (item.Category == 3)
@@ -81,6 +252,39 @@ namespace BTLLTW_webBanQuanAo
 
             if (category == "female")
             {
+                if (loctien == "giatren500")
+                {
+                    foreach (Item item in list)
+                    {
+                        if (item.Category >= 4 && item.Final_price > 500000)
+                        {
+                            html += generateString(item);
+                        }
+                    }
+                    return html;
+                }
+                if (loctien == "gia200-500")
+                {
+                    foreach (Item item in list)
+                    {
+                        if (item.Category >= 4 && item.Final_price > 200000 && item.Final_price < 500000)
+                        {
+                            html += generateString(item);
+                        }
+                    }
+                    return html;
+                }
+                if (loctien == "giaduoi200")
+                {
+                    foreach (Item item in list)
+                    {
+                        if (item.Category >= 4 && item.Final_price < 500000)
+                        {
+                            html += generateString(item);
+                        }
+                    }
+                    return html;
+                }
                 foreach (Item item in list)
                 {
                     if (item.Category >= 4 && item.Category <= 6)
@@ -92,6 +296,39 @@ namespace BTLLTW_webBanQuanAo
 
             if (category == "f_casual")
             {
+                if (loctien == "giatren500")
+                {
+                    foreach (Item item in list)
+                    {
+                        if (item.Category == 1 && item.Final_price > 500000)
+                        {
+                            html += generateString(item);
+                        }
+                    }
+                    return html;
+                }
+                if (loctien == "gia200-500")
+                {
+                    foreach (Item item in list)
+                    {
+                        if (item.Category == 1 && item.Final_price > 200000 && item.Final_price < 500000)
+                        {
+                            html += generateString(item);
+                        }
+                    }
+                    return html;
+                }
+                if (loctien == "giaduoi200")
+                {
+                    foreach (Item item in list)
+                    {
+                        if (item.Category == 1 && item.Final_price < 500000)
+                        {
+                            html += generateString(item);
+                        }
+                    }
+                    return html;
+                }
                 foreach (Item item in list)
                 {
                     if (item.Category == 4)
@@ -103,6 +340,39 @@ namespace BTLLTW_webBanQuanAo
 
             if (category == "f_work")
             {
+                if (loctien == "giatren500")
+                {
+                    foreach (Item item in list)
+                    {
+                        if (item.Category == 5 && item.Final_price > 500000)
+                        {
+                            html += generateString(item);
+                        }
+                    }
+                    return html;
+                }
+                if (loctien == "gia200-500")
+                {
+                    foreach (Item item in list)
+                    {
+                        if (item.Category == 5 && item.Final_price > 200000 && item.Final_price < 500000)
+                        {
+                            html += generateString(item);
+                        }
+                    }
+                    return html;
+                }
+                if (loctien == "giaduoi200")
+                {
+                    foreach (Item item in list)
+                    {
+                        if (item.Category == 5 && item.Final_price < 500000)
+                        {
+                            html += generateString(item);
+                        }
+                    }
+                    return html;
+                }
                 foreach (Item item in list)
                 {
                     if (item.Category == 5)
@@ -114,6 +384,39 @@ namespace BTLLTW_webBanQuanAo
 
             if (category == "f_sports")
             {
+                if (loctien == "giatren500")
+                {
+                    foreach (Item item in list)
+                    {
+                        if (item.Category == 6 && item.Final_price > 500000)
+                        {
+                            html += generateString(item);
+                        }
+                    }
+                    return html;
+                }
+                if (loctien == "gia200-500")
+                {
+                    foreach (Item item in list)
+                    {
+                        if (item.Category == 6 && item.Final_price > 200000 && item.Final_price < 500000)
+                        {
+                            html += generateString(item);
+                        }
+                    }
+                    return html;
+                }
+                if (loctien == "giaduoi200")
+                {
+                    foreach (Item item in list)
+                    {
+                        if (item.Category == 6 && item.Final_price < 500000)
+                        {
+                            html += generateString(item);
+                        }
+                    }
+                    return html;
+                }
                 foreach (Item item in list)
                 {
                     if (item.Category == 6)
@@ -125,6 +428,39 @@ namespace BTLLTW_webBanQuanAo
 
             if (category == "kid")
             {
+                if (loctien == "giatren500")
+                {
+                    foreach (Item item in list)
+                    {
+                        if (item.Category == 7 && item.Final_price > 500000)
+                        {
+                            html += generateString(item);
+                        }
+                    }
+                    return html;
+                }
+                if (loctien == "gia200-500")
+                {
+                    foreach (Item item in list)
+                    {
+                        if (item.Category == 7 && item.Final_price > 200000 && item.Final_price < 500000)
+                        {
+                            html += generateString(item);
+                        }
+                    }
+                    return html;
+                }
+                if (loctien == "giaduoi200")
+                {
+                    foreach (Item item in list)
+                    {
+                        if (item.Category == 7 && item.Final_price < 500000)
+                        {
+                            html += generateString(item);
+                        }
+                    }
+                    return html;
+                }
                 foreach (Item item in list)
                 {
                     if (item.Category == 7)
@@ -134,8 +470,41 @@ namespace BTLLTW_webBanQuanAo
                 }
             }
 
-            if(category == "sale")
+            if (category == "sale")
             {
+                if (loctien == "giatren500")
+                {
+                    foreach (Item item in list)
+                    {
+                        if (item.Final_price > 500000)
+                        {
+                            html += generateString(item);
+                        }
+                    }
+                    return html;
+                }
+                if (loctien == "gia200-500")
+                {
+                    foreach (Item item in list)
+                    {
+                        if (item.Final_price > 200000 && item.Final_price < 500000)
+                        {
+                            html += generateString(item);
+                        }
+                    }
+                    return html;
+                }
+                if (loctien == "giaduoi200")
+                {
+                    foreach (Item item in list)
+                    {
+                        if (item.Final_price < 500000)
+                        {
+                            html += generateString(item);
+                        }
+                    }
+                    return html;
+                }
                 foreach (Item item in list)
                 {
                     if (item.Price != 0)
@@ -147,6 +516,40 @@ namespace BTLLTW_webBanQuanAo
 
             if (category == "new")
             {
+                if (loctien == "giatren500")
+                {
+                    foreach (Item item in list)
+                    {
+                        if ( item.Final_price > 500000)
+                        {
+                            html += generateString(item);
+                        }
+                    }
+                    return html;
+                }
+                if (loctien == "gia200-500")
+                {
+                    foreach (Item item in list)
+                    {
+                        if (item.Final_price > 200000 && item.Final_price < 500000)
+                        {
+                            html += generateString(item);
+                        }
+                    }
+                    return html;
+                }
+                if (loctien == "giaduoi200")
+                {
+                    foreach (Item item in list)
+                    {
+                        if ( item.Final_price < 500000)
+                        {
+                            html += generateString(item);
+                        }
+                    }
+                    return html;
+                }
+
                 foreach (Item item in list)
                 {
                     html += generateString(item);
@@ -160,7 +563,7 @@ namespace BTLLTW_webBanQuanAo
         {
             string html = "";
             html += "<div class='item'>" +
-                        "<a href='ctsp.aspx?id="+item.Id+"'>" +
+                        "<a href='ctsp.aspx?id=" + item.Id + "'>" +
                             "<img src='" + item.Image + "' alt=''>" +
                         "</a>" +
                         "<div class='item-info'>" +
